@@ -1,16 +1,15 @@
 ///<reference types="cypress" />
 
 import Cadastro from "../support/Cadastro";
-
+const faker = require('faker');
 
 describe("Teste", () => {
 
     it("Criar usuário", () => {
         Cadastro.cadastroLogin();
-        Cadastro.Cadastrar("Sam", "sams33@gmail.com", "teste");
+        Cadastro.Cadastrar(faker.name.findName(), faker.internet.email(), faker.internet.password());
         
         cy.get('.alert-link').should('have.text', "Cadastro realizado com sucesso");
-
 
     });
 
@@ -27,5 +26,11 @@ describe("Teste", () => {
 
     });
 
+    /* it("Excluir item lista", () => {
+
+        cy.get('[data-testid=limparLista]').click();
+
+    });
+ */
 
 });
