@@ -1,2 +1,4 @@
 # Sobre o projeto
-Este foi um desafio de testes automatizados no site do serverest, utilizando cypress.
+Este projeto são testes automatizados no site do serverest(front), utilizando cypress.
+Este foi um desafio realizado ao fim da trilha de QA do +praTI
+
